@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weight Training</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            header{
+                text-align: center;
+                color: lightgray;
+                background-color: rgb(105, 104, 104);
+                border-radius: 12px;
+                padding: 30px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-top: 20px;
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(to bottom, black, rgb(105, 104, 104))
+            }
+            
+            section{
+                margin-bottom: 40px;
+                border-radius: 10px;
+                display: none;
+                padding: 30px;
+            }
+
+            fieldset{
+                margin-top: 40px;
+                text-align: center;
+                border: 2px solid black;
+                border-radius: 12px;
+                padding: 20px 0;
+            }
+
+            h1{
+                color: hwb(29 0% 18%);
+            }
+            h2 {
+                font-size: 2.2em;
+                margin-bottom: 20px;
+                margin-left: 40px;
+                border-bottom: 3px solid #ff7b00;
+                padding-bottom: 5px;
+            }
+
+            .active{
+                display: block; /*This will only show active section*/
+                margin-bottom: 50px;
+            }
+
+            form{
+                margin-top: 25px;
+                margin-left: 10%;
+                text-align:unset;
+            }
+
+            .question{
+                margin-bottom: 20px;
+            }
+
+            a{
+                color: rgb(52, 46, 40);
+                text-decoration: none;
+                font-weight: normal;
+                transition: color 0.3s ease;
+            }
+
+            a:hover {
+                color: #e25c00;
+            }
+
+            a:active {
+                color: #e25c00;
+            }
+
+            p{
+                text-align: center;
+            }
+
+            img{
+                max-width: 65%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                display: block;
+                margin: auto;
+                box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            table{
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+                
+            }
+
+            .links{
+                text-align: center;
+            }
+
+            iframe {
+            margin: 0 auto;
+            display: block;
+            margin-top: 40px;
+            }
+
+            figcaption{
+                text-align: center;
+            }
+
+            h2{
+                text-align: center;
+                color: white;
+            }
+
+            .exercise-form {
+                width: 100%;
+                max-width: 500px;
+                background-color: rgb(141, 138, 138);
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border: 1px solid #ff7b00;
+            }
+            .exercise-form label {
+                display: block;
+                margin-bottom: 8px;
+                text-align: left;
+                font-weight: bold;
+                
+            }   
+
+            nav{
+                font-size: 1.25em;
+                padding: 5px;
+                text-align: center;
+                color: darkgrey;
+            }
+
+            blockquote {
+            background-color: #bcbcbc;
+            border-left: 5px solid black;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 1em;
+            color: black;
+            border-radius: 8px;
+            text-align: center;
+            }
+
+            footer{
+                text-align: center;
+                padding: 10px;
+                border-radius: 12px;
+                margin-left: 40px;
+                margin-right: 40px;
+                margin-bottom: 10px;
+                font-size: 0.9em;
+                color: black;
+                background-color: rgb(105, 104, 104);
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Daily Exercise</h1>
+            <nav>
+                <a href="javascript:void(0)" onclick="showSection('what')"> What |</a> 
+                <a href="javascript:void(0)" onclick="showSection('who')"> Who |</a> 
+                <a href="javascript:void(0)" onclick="showSection('when')"> When |</a> 
+                <a href="javascript:void(0)" onclick="showSection('where')"> Where |</a> 
+                <a href="javascript:void(0)" onclick="showSection('why')"> Why |</a> 
+                <a href="javascript:void(0)" onclick="showSection('how')"> How |</a> 
+                <a href="javascript:void(0)" onclick="showSection('ai-prompt')"> AI Prompts </a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="who">
+                <h2>Who</h2>
+                
+                    <img src="images/professionalphoto.jpg" alt="picture of Jimmy Cedillo">
+                    <figcaption>picture of me</figcaption>
+                
+                <p>Hello my name is Jimmy, I am a college student who's all about pushing his limits and staying in top physical shape. Whether it's hitting the gym for a strength session or running through a challenging workout routine. I have always strived to improve my fitness and to build a healthier lifestyle. I am committed to constantly challenging myself, setting new goals, and making progress every day, all while balancing my academic life and staying motivated. For me fitness is not just a hobby, it is a passion that drives me to be the best version of myself.</p>
+                <form id="survey-form" class="exercise-form">
+                    <p>Now that you have gotten to know a bit about me, I'd love to hear from you!</p>
+                    <div class="question" id="question-1">
+                        <label for="name">1. What is your name?</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        
+                    </div>
+                    <div class="question" id="question-2">
+                        <label>2. What type of exercise are you most interested in?</label>
+                        <div class="options">
+                            <label><input type="radio" name="interest">weight training</label>
+                            <label><input type="radio" name="interest">calisthenics</label>
+                            <label><input type="radio" name="interest">weight loss</label>
+                            <label><input type="radio" name="interest">sport performance</label>
+                            <label><input type="radio" name="interest">other</label>
+                        </div>
+                        
+                    </div>
+                    <div class="question" id="question-3">
+                        <label for="feedback">3. What are your fitness goals?</label>
+                        <input type="text" id="feedback" name="feedback" placeholder="type here" required>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            
+            </section>
+
+            <section id="what" class="active">
+                <h2>What</h2>
+                <figure>
+                    <img src="images/runningPhoto.png" alt="photo of a person running">
+                    <figcaption>picture of a person sprinting</figcaption>
+                </figure>
+                <p>Physical fitness plays a crucial role in improving cardiovascular health, building strength, enhancing flexibility, and boosting mental well-being. By making exercise a regular part of your routine, you can achieve a well-rounded state of health that encompasses both physical and mental vitality. Below is a small table showing a few of the benefits of daily exercise.</p>
+                <table class="exercise-table">
+                    <thead>
+                        <tr>
+                            <th>Exercise Type</th>
+                            <th>Duration</th>
+                            <th>Benefits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>• Cardio</td>
+                            <td>• 30 minutes</td>
+                            <td>• Improves heart health and burns calories</td>
+                        </tr>
+                        <tr>
+                            <td>• Strength Training</td>
+                            <td>• 45 minutes</td>
+                            <td>• Builds muscle mass and boosts metabolism</td>
+                        </tr>
+                        <tr>
+                            <td>• Yoga</td>
+                            <td>• 60 minutes</td>
+                            <td>• Improves flexibility and reduces stress</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <blockquote>Take care of your body. It is the only place you have to live - Jim Rohn</blockquote>
+                
+            </section>
+
+            <section id="when">
+                <h2>When</h2>
+                <figure>
+                    <img src="images/gymEquipment.png">
+                    <figcaption>picture of tredmills</figcaption>
+                </figure>
+                <p>How often you exercise depends on your goals. For general fitness, aim for at least 3-5 days a week. If you're focused on weight loss, 5-7 days with a mix of cardio and strength training might be more effective. For building muscle, 3-4 days per week focusing on different muscle groups will give your body time to recover and grow stronger. Always listen to your body and make sure you're giving it the rest it needs.</p>
+                <fieldset>
+                    <legend for="feedback">how often do you workout a week?</legend>
+                        <input type="text" id="feedback" name="feedback" placeholder="type here" required>
+                        <button type="submit">Submit</button>
+                </fieldset>
+            </section>
+            <section id="where">
+                <h2>Where</h2>
+                <figure>
+                    <img src="images/gymPhoto.png">
+                    <figcaption>picture of a gym</figcaption>
+                </figure>
+                <h3>Where can You Workout?</h3>
+                <p>The beauty of exercise is that you do not need to be in a fancy gym to get a great workout. The where is up to you, and it depends on what you are comfortable with and the type of workout you are doing.</p>
+                <ol>
+                    <li><strong>At Home:</strong> Working out at home is perfect if you are looking for convenience and flexibility. Here is why
+                        <ul>
+                            <li>No Commute: Skip the traffic and get to your workout in seconds!</li>
+                            <li>Privacy: Work out without worrying about others watching.</li>
+                            <li>Minimal Equipment Needed: You can start with bodyweight exercises and progress to using dumbbells, resistance bands, or even household items like water bottles.</li>
+                        </ul>
+                    </li>
+                    <li><strong>At the Gym:</strong> The social & equipment-packed choice
+                        <ul>
+                            <li>Variety of Equipment: From weights to cardio machines to specialized equipment, gyms provide everything you need for a well-rounded workout.</li>
+                            <li>Trained Instructors: If you're looking to get started with new exercises or routines, gyms often have trainers who can provide guidance and motivation.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Outdoor Workout:</strong> Nature's gym 
+                        <ul>
+                            <li>Fresh Air: Exercising outside can boost your mood and give you energy, especially if you are running or cycling in nature.</li>
+                            <li>Variety: From running on trails to outdoor yoga in the park to bodyweight exercises at a local playground, nature offers endless options.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <figure>
+                    <iframe src="https://www.google.com/maps/search/gyms/@35.2062599,-80.8419328,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D"
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                    <figcaption>check out your nearest gym</figcaption>
+                </figure>
+            </section>
+
+            <section id="why">
+                <h2>Why</h2>
+                <figure>
+                    <img src="images/whyPhoto.png">
+                    <figcaption>picture of a woman working out</figcaption>
+                </figure>
+                <h3>why should someone workout?</h3>
+                <ul>
+                    <li><strong>Physical Health:</strong> Regular exercise helps improve cardiovascular health, strengthens muscles and bones, and boosts immune function. It can lower the risk of chronic diseases like diabetes, heart disease, and obesity.</li>
+                    <li><strong>Mental Well-being:</strong> Exercise releases endorphins, which are natural mood lifters. It can reduce stress, anxiety, and symptoms of depression, helping you feel more mentally clear and positive.</li>
+                    <li><strong>Improved Sleep:</strong> Physical activity can help regulate sleep patterns, making it easier to fall asleep and enjoy deeper rest.</li>
+                    <li><strong>Boosted Confidence:</strong> Seeing progress in your fitness, whether it is building muscle or improving endurance, can increase self-esteem and body image.</li>
+                    <li><strong>Increased Energy:</strong> Even though it seems like it might tire you out, regular exercise actually boosts your energy levels and helps you feel more alert throughout the day.</li>
+                    <li><strong>Social Connections:</strong> Whether it's at the gym, a fitness class, or through group sports, exercise provides opportunities to meet new people and form connections.</li>
+                </ul>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=8so1WZ4j1oQ&t=40s"
+                    title="YouTube video player"  
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                <fieldset>
+                    <legend>now it's time to hear from you</legend>
+                        <label for="fitness-goal">what is your main fitness goal?</label>
+                        <input id="fitness-goal" name="fitness-goal" type="text" required>
+                        <button type="submit">Submit</button>
+                </fieldset>
+            </section>
+
+            <section id="how">
+                <h2>How</h2>
+                <figure>
+                    <img src="images/gymEssentials.png">
+                    <figcaption>gym essentials</figcaption>
+                </figure>
+                <h3>how to stay active every day</h3>
+                <ol>
+                    <li><strong>create a support system:</strong> Find a workout buddy if you struggle with motivation, working out with a friend or family member can help keep you accountable. Join a Fitness Community, whether it's online or in-person, communities help you stay engaged.</li>
+                    <li><strong>Remember, It Is All About Consistency Over Perfection</strong> Focus on Consistency, Not Intensity: it is okay if some days are less intense than others—what matters is that you are doing something every day. Overall enjoy the process, exercise should make you feel good, so try not to see it as a chore.</li>
+                    <li><strong>Track Your Progress to Stay motivated:</strong> Use a fitness journal or app to write down what workouts you will do, how long you will workout, and how you feel afterwards. Make sure you celebrate milestones whether it is completing a 30 day streak or reaching a personal best in a particular exercise. </li>
+                    <li><strong>Listen to Your Body and Rest When Needed:</strong> Rest when you need it, if you are beginning to feel fatigued or sore do not hesitate to give your body the rest it needs. Overworking yourself can lead to a burnout or injury.</li>
+                    <li><strong>Vary Your Workout to Keep It Fun and Engaging:</strong> Alternate between cardio and strength training is a great way to keep your workouts balanced. You also do not have to do the same thing everyday, try activities that excite you like dancing, swimming, hiking etc.</li>
+                    <li><strong>Make It a Habit by Scheduling It In:</strong> Exercise is just like any other important appointment, scedule it! Find the best time for you whether you are a morning person or prefer working out in the evening.</li>
+                </ol>
+                <form action="#" method="POST" class="exercise-form">
+                    <p>Now it's time to reflect and set you're new goal!</p>
+                    <label for="time">What time are you usually free for a workout?</label>
+                    <input type="time" id="time" name="time" required>
+        
+                    <label for="frequency">How many times per week do you plan to workout?</label>
+                    <input type="number" id="frequency" name="frequency" min="1" max="7" placeholder="1 to 7 times" required>
+        
+                    <label for="experience">How experienced are you with exercise?</label>
+                    <select id="experience" name="experience" required>
+                        <option value="beginner">Beginner (Just starting)</option>
+                        <option value="intermediate">Intermediate (Some experience)</option>
+                        <option value="advanced">Advanced (Regular exerciser)</option>
+                    </select>
+        
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </section>
+            <section id="ai-prompt">
+                <h2>AI Prompts</h2>
+                <p>Prompts: </p>
+                <ul>
+                    <li>Based on the provided HTML code, write the corresponding CSS.</li>
+                    <li>Using the given code, write the JavaScript and CSS necessary to hide sections when navigating through the navbar.</li>
+                    <li>For every mandatory section (excluding the AI section), create a paragraph focused on the hobby of exercise and fitness</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Page Built by <a href = "../jimmycedil.co/index.html">jimmycedil.co</a> &copy; 2025, <em> Certified in <a href = "https://www.freecodecamp.org/certification/jcedill/responsive-web-designLinks to an external site.">Responive Web Design</a></em>    </p>
+        </footer>
+
+        <script>
+           
+            // Credit to GeeksForGeeks for this function
+        function titleCase(s) {
+            return s.toLowerCase()
+                    .split(' ')
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(' ');
+        }
+
+        function showSection(sectionId) {
+          const sections = document.querySelectorAll('section');
+          sections.forEach((section) => {
+            section.classList.remove('active');
+          });
+  
+          const activeSection = document.getElementById(sectionId);
+          const activeSectionId = activeSection.id;
+          activeSection.classList.add('active');
+          document.title = "Weight Training" + titleCase(activeSectionId);
+        }
+        
+        window.onload = function() {
+          showSection('what');
+        };
+        </script>
+    </body>
+</html>
