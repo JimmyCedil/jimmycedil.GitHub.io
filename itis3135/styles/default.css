@@ -29,3 +29,34 @@ img{
 .webeval_section {
     border-bottom: solid 2px black;
 }
+
+/* Mobile Devices */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+    body {
+        font-size: 110%;
+    }
+}
+
+/* Tablet Devices */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 90%;
+    }
+    body {
+        font-size: 115%;
+    }
+}
+
+/* Laptops / Small Screens */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    main {
+        max-width: 1000px;
+    }
+    body {
+        font-size: 120%;
+    }
+    
+}
