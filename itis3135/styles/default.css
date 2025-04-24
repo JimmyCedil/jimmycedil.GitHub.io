@@ -15,6 +15,53 @@ main{
     margin-left: 20%;
     margin-right: 20%;
 }
+.bullet-points {
+    text-align: left;
+    display: block;
+    justify-content: center;
+    padding: 0 auto;
+}
+
+.bullet-points ul {
+    list-style-position: inside;
+    padding-left: 50px;
+    margin: 0 auto;
+}
+.better-table table {
+    min-width: 80%;
+    max-width: 90%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.better-table th, 
+.better-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.better-table figcaption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.better-table thead tr {
+    background-color: #333;
+    color: white;
+}
+
+.better-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.better-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.better-table .total-row th {
+    text-align: right;
+}
 
 img{
     width:60%;
