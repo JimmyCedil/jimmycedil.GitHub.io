@@ -34,12 +34,18 @@ main{
     margin: auto;
 }
 
-.better-table th, 
-.better-table td {
+table {
+    width: 75%;
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  th, td {
     border: 1px solid black;
     padding: 8px;
-    text-align: center;
-}
+    text-align: left;
+  }
+
 
 .better-table figcaption {
     font-weight: bold;
