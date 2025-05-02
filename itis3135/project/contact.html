@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Morning Star Cleaning - Contact</title>
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles/default.css">
+    </head>
+
+    <body>
+        <header>
+            <div data-include="components/header.html"></div>
+        </header>
+        <aside>
+            <div data-include="components/sidebar.html"></div>
+        </aside>
+
+        <main>
+            <div class="image-container">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <section id="contact">
+                <h2>contact Us</h2>
+                <form id="contactForm" action="#">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Send Message</button>
+                    </div>
+
+                    <p id="formFeedback" class="hidden"></p>
+                </form>
+            </section>
+
+
+        </main>
+        <footer>
+            <div data-include="components/footer.html"></div>
+        </footer>
+        <script src="scripts/HTMLInclude.js"></script>
+        <!-- Link to the javascript file for the form-->
+         <script src="scripts/form.js"></script>
+    </body>
+</html>
